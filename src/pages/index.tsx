@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Text from '@/components/Text';
+import List from '@/components/List';
 
 import { attributes } from '@/content/index.md';
 
@@ -17,8 +18,13 @@ interface Section {
   content?: string;
   ctaText?: string;
   ctaLink?: string;
+  items?: Array<Item>;
 }
 
+interface Item {
+  title: string;
+  content: string;
+}
 
 export default function Home() {
   const { en, es } = attributes;
@@ -64,6 +70,15 @@ export default function Home() {
                 ctaLink={section.ctaLink}
                 key={`${index}`}
                 id={section.id || ""}
+              />
+            );
+          case 'list':
+            return (
+              <List
+                title={section.title || "Delta Bridge Partners"}
+                content={section.content || ""}
+                key={`${index}`}
+                items={section.items || []}
               />
             );
           default:
