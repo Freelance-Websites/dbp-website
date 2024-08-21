@@ -11,7 +11,7 @@ export default function Header({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-gray-800 p-4">
+    <header className="fixed top-0 w-full z-10 p-4">
       <div className="container mx-auto flex md:items-center justify-between">
         <a
           href="#top"
