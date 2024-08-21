@@ -28,8 +28,10 @@ interface Item {
 
 export default function Home() {
   const { en, es } = attributes;
+
   const [language, setLanguage] = useState('en');
   const [selectedContentSource, setSelectedContentSource] = useState(language === 'en' ? JSON.stringify(en) : JSON.stringify(es));
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const changeLanguage = (lang: string) => {
     setLanguage(lang);
@@ -40,6 +42,14 @@ export default function Home() {
   useEffect(() => {
     const storedLanguage = window.localStorage.getItem('language');
     changeLanguage(storedLanguage ? storedLanguage : 'en');
+
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 900) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    });
   }, []);
 
   return (
@@ -49,6 +59,7 @@ export default function Home() {
       <Header
         activeLanguage={language}
         changeLanguage={changeLanguage}
+        isScrolled={isScrolled}
       />
       {JSON.parse(selectedContentSource).sections.map((section: Section, index: Number) => {
         switch(section.type) {
