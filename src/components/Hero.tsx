@@ -1,14 +1,15 @@
 const Hero = ({
   video,
   title,
+  id
 }: {
   video: string;
   title: string;
+  id: string;
 }) => {
   return (
     <section
-      className="col-span-full"
-      id="top"
+      id={id}
     >
       <div className="relative hero overflow-hidden">
         <div className="w-screen h-screen relative">

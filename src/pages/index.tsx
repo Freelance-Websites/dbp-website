@@ -3,15 +3,20 @@ import { Inter } from "next/font/google";
 
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Text from '@/components/Text';
 
 import { attributes } from '@/content/index.md';
 
 const inter = Inter({ subsets: ["latin"] });
 
 interface Section {
+  id?: string;
   type: string;
   video?: string;
   title?: string;
+  content?: string;
+  ctaText?: string;
+  ctaLink?: string;
 }
 
 
@@ -47,8 +52,20 @@ export default function Home() {
                 video={section.video || ""}
                 title={section.title || "Delta Bridge Partners"}
                 key={`${index}`}
-                />
-              )
+                id={section.id || ""}
+              />
+            );
+          case 'text':
+            return (
+              <Text
+                title={section.title || "Delta Bridge Partners"}
+                content={section.content || ""}
+                ctaText={section.ctaText}
+                ctaLink={section.ctaLink}
+                key={`${index}`}
+                id={section.id || ""}
+              />
+            );
           default:
             break;
         }
