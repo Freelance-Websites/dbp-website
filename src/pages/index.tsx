@@ -27,29 +27,23 @@ interface Item {
 }
 
 export default function Home() {
-  const { en, es } = attributes;
-
-  const [language, setLanguage] = useState('en');
-  const [selectedContentSource, setSelectedContentSource] = useState(language === 'en' ? JSON.stringify(en) : JSON.stringify(es));
+  const { sections } = attributes;
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const changeLanguage = (lang: string) => {
-    setLanguage(lang);
-    setSelectedContentSource(lang);
-    window.localStorage.setItem('language', lang === 'en' ? JSON.stringify(en) : JSON.stringify(es));
-  }
+  const handleScroll = () => {
+    if (window.scrollY > 900) {
+    setIsScrolled(true);
+    } else {
+    setIsScrolled(false);
+    }
+  };
 
   useEffect(() => {
-    const storedLanguage = window.localStorage.getItem('language');
-    changeLanguage(storedLanguage ? storedLanguage : 'en');
+    window.addEventListener('scroll', handleScroll);
 
-    window.addEventListener('scroll', () => {
-      if(window.scrollY > 900) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    });
+    return () => {
+    window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
@@ -57,11 +51,9 @@ export default function Home() {
       className={`${inter.className}`}
     >
       <Header
-        activeLanguage={language}
-        changeLanguage={changeLanguage}
         isScrolled={isScrolled}
       />
-      {JSON.parse(selectedContentSource).sections.map((section: Section, index: Number) => {
+      {sections.map((section: Section, index: Number) => {
         switch(section.type) {
           case 'hero':
             return (
