@@ -22,11 +22,11 @@ const Text = ({
         className="grid grid-cols-1 lg:grid-cols-2 gap-8 container mx-auto py-12 md:py-16 lg:py-24 xl:py-32"
       >
         <li>
-          <h2 className="text-white text-2xl md:text-4xl pb-0 md:pb-8 lg:pb-12">{title}</h2>
+          <h2 className="font-serif text-white text-2xl md:text-4xl pb-0 md:pb-8 lg:pb-12">{title}</h2>
           {ctaLink || ctaText &&
             <a
               href={ctaLink ? ctaLink : id === 'about' ? 'mission-vission' : '#'}
-              className="text-white text-xl md:text-2xl underline decoration-indigo-400 underline-offset-8 hover:no-underline decoration-1 hidden md:block"
+              className="font-serif text-white text-xl md:text-2xl underline decoration-indigo-400 underline-offset-8 hover:no-underline decoration-1 hidden md:block"
             >
               {ctaText}
             </a>

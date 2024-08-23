@@ -19,7 +19,7 @@ const List = ({
       <div className="container mx-auto py-12 md:py-16 lg:py-24 xl:py-32 grid grid-cols-1 lg:grid-cols-2 gap-8">
         <ul>
           <li>
-            <h2 className="text-stone-800 text-2xl md:text-4xl pb-8 lg:pb-12">{title}</h2>
+            <h2 className="font-serif text-stone-800 text-2xl md:text-4xl pb-8 lg:pb-12">{title}</h2>
             <p className="text-stone-500 font-light text-lg md:text-2xl md:leading-relaxed">{content}</p>
           </li>
         </ul>

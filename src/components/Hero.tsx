@@ -28,7 +28,7 @@ const Hero = ({
       <div
         className="absolute flex items-center justify-center w-full h-full top-0 text-[7vw]"
       >
-        <h1 className="text-white leading-none">
+        <h1 className="text-white leading-none font-serif">
           {title}
         </h1>
       </div>
