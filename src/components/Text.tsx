@@ -16,6 +16,7 @@ const Text = ({
   id: string;
 }) => {
   const fontColor = bgColor === 'bg-indigo-600' || bgColor === 'bg-stone-800' ? 'text-white' : 'text-stone-800';
+  const isCtaUrl = ctaLink && ctaLink.startsWith('http') || ctaLink && ctaLink.startsWith('/');
   return (
     <section
       id={id}
@@ -26,9 +27,9 @@ const Text = ({
       >
         <li>
           <h2 className={`font-serif ${fontColor} text-2xl md:text-4xl pb-0 md:pb-8 lg:pb-12`}>{title}</h2>
-          {ctaLink || ctaText &&
+          {ctaLink && ctaText &&
             <a
-              href={ctaLink ? ctaLink : id === 'about' ? 'mission-vission' : '#'}
+              href={isCtaUrl ? ctaLink : `#${ctaLink}`}
               className={`
                 font-serif ${fontColor} text-xl md:text-2xl underline decoration-indigo-400 underline-offset-8 hover:no-underline decoration-1 hidden md:block
               `}
@@ -42,12 +43,14 @@ const Text = ({
         </li>
         {/* Separate mobile CTA */}
         <li className="block md:hidden">
-          <a
-            href={ctaLink ? ctaLink : id === 'about' ? 'mission-vission' : '#'}
-            className={`${fontColor} font-serif text-xl md:text-2xl underline decoration-indigo-400 underline-offset-8 hover:no-underline decoration-1`}
-          >
-            {ctaText}
-          </a>
+          {ctaLink && ctaText &&
+            <a
+              href={isCtaUrl ? ctaLink : `#${ctaLink}`}
+              className={`${fontColor} font-serif text-xl md:text-2xl underline decoration-indigo-400 underline-offset-8 hover:no-underline decoration-1`}
+            >
+              {ctaText}
+            </a>
+          }
         </li>
       </ul>
     </section>

@@ -6,20 +6,27 @@ interface Item {
 const List = ({
   title,
   content,
-  items
+  items,
+  bgColor,
+  id
 }: {
   title: string;
   content: string;
+  bgColor: string;
+  id: string;
   items: Array<Item>;
 }) => {
+  const fontColor = bgColor === 'bg-indigo-600' || bgColor === 'bg-stone-800' ? 'text-white' : 'text-stone-800';
+
   return (
     <section
-      className="bg-stone-100 px-4 lg:px-0"
+      className={`${bgColor} px-4 lg:px-0`}
+      id={id}
     >
       <div className="container mx-auto py-12 md:py-16 lg:py-24 xl:py-32 grid grid-cols-1 lg:grid-cols-2 gap-8">
         <ul>
           <li>
-            <h2 className="font-serif text-stone-800 text-2xl md:text-4xl pb-8 lg:pb-12">{title}</h2>
+            <h2 className={`font-serif ${fontColor} text-2xl md:text-4xl pb-8 lg:pb-12`}>{title}</h2>
             <p className="text-stone-500 font-light text-lg md:text-2xl md:leading-relaxed">{content}</p>
           </li>
         </ul>
@@ -34,7 +41,7 @@ const List = ({
                   <div className="bg-white rounded-full h-10 w-10 md:w-12 md:h-12 flex items-center justify-center">
                     <span className="text-indigo-600 text-xl md:text-2xl">{index + 1}</span>
                   </div>
-                  <h3 className="text-stone-800 text-sm uppercase tracking-widest font-medium">{item.title}</h3>
+                  <h3 className={`${fontColor} text-sm uppercase tracking-widest font-medium`}>{item.title}</h3>
                 </div>
                 <p className="text-stone-500 font-light text-lg md:text-2xl md:leading-relaxed">{item.content}</p>
               </li>

@@ -17,7 +17,7 @@ export default function Header({
         >
           <svg fill="none" height="18" viewBox="0 0 80 18" width="80" xmlns="http://www.w3.org/2000/svg" className={`${isScrolled || isOpen ? 'fill-stone-800' : 'fill-white'}`}>
             <g>
-              <path clipRule="evenodd" d="m69.0479 0 10.354 17.9337-8.4823-.0133-6.0957-10.59869zm-5.2873 9.00002 5.154 8.92698-10.3023-.0033z" fillRule="evenodd" />
+              <path clipRule="evenodd" d="m69.0479 0 10.354 17.9337-8.4823-.0133-6.0957-10.59869zm-5.2873 9.00002 5.154 8.92698-10.3023-.0033z" fillRule="evenodd" className={`${isScrolled || isOpen ? 'fill-indigo-600' : 'fill-white'}`} />
               <path d="m44.5493 3.56808v-3.524684h15.1772v3.524684h-5.4448v14.43192h-4.2788v-14.43192z" />
               <path d="m33.2739 18v-17.956604h4.3401v14.431904h7.4703v3.5247z" />
               <path d="m18.0356 18v-17.956604h12.5206v3.524684h-8.1805v3.68251h7.5404v3.53341h-7.5404v3.6913h8.1805v3.5247z" />

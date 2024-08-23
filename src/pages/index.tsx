@@ -82,8 +82,8 @@ export default function Home() {
               <Text
                 title={section.title || "Delta Bridge Partners"}
                 content={section.content || ""}
-                ctaText={section.ctaText}
-                ctaLink={section.ctaLink}
+                ctaText={section.ctaText || "Learn more"}
+                ctaLink={section.ctaLink || "#"}
                 key={`${index}`}
                 id={section.id || ""}
                 bgColor={section.bgColor || "bg-indigo-600"}
@@ -93,9 +93,11 @@ export default function Home() {
             return (
               <List
                 title={section.title || "Delta Bridge Partners"}
+                id={section.id || ""}
                 content={section.content || ""}
                 key={`${index}`}
                 items={section.items || []}
+                bgColor={section.bgColor || "bg-stone-100"}
               />
             );
           case 'map':
