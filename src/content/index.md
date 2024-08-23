@@ -26,4 +26,20 @@ sections:
     title: Operating worldwide from our US and Europe HQs.
     image: /images/map.png
     id: map
+  - type: stats
+    title: By the numbers
+    image: /images/stats.jpg
+    stats:
+      - number: 150
+        prepend: +
+        content: Loans funded
+      - number: 40
+        prepend: +
+        content: Years combined experience
+      - number: 350
+        prepend: $
+        append: M+
+        content: Total loan origination
+      - number: 20
+        content: States served
 ---

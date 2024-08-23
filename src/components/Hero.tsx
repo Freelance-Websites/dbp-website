@@ -13,7 +13,7 @@ const Hero = ({
     >
       <div className="relative hero overflow-hidden">
         <div className="w-screen h-screen relative">
-          <div className="absolute w-full h-full bg-gray-900 opacity-20" />
+          <div className="absolute w-full h-full bg-stone-800 opacity-20" />
           <video
             className="w-full h-full object-cover"
             autoPlay
