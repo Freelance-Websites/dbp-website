@@ -7,6 +7,7 @@ sections:
   - type: text
     title: Trusted Investment Partner
     id: about
+    bgColor: bg-indigo-600
     content: >-
       Welcome to Delta, a premier investment advisory firm specializing in real estate. We offer a comprehensive platform that caters to both sophisticated investors seeking exceptional returns and real estate developers requiring strategic capital.
 
@@ -42,4 +43,14 @@ sections:
         content: Total loan origination
       - number: 20
         content: States served
+  - type: text
+    title: Finance solutions
+    id: services
+    bgColor: bg-stone-800
+    content: >-
+      **Expert Financing Solutions for Your Projects.**
+
+
+      Delta Bridge Partners is a leading provider of real estate financing solutions. We offer a comprehensive suite of products designed to meet the needs of borrowers across the real estate spectrum.
+    ctaText: Learn more
 ---

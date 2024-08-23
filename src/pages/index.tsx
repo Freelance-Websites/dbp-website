@@ -22,6 +22,7 @@ interface Section {
   content?: string;
   ctaText?: string;
   ctaLink?: string;
+  bgColor?: string;
   items?: Array<Item>;
   stats?: Array<Stat>;
 }
@@ -85,6 +86,7 @@ export default function Home() {
                 ctaLink={section.ctaLink}
                 key={`${index}`}
                 id={section.id || ""}
+                bgColor={section.bgColor || "bg-indigo-600"}
               />
             );
           case 'list':
