@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Text from '@/components/Text';
 import List from '@/components/List';
+import Map from '@/components/Map';
 
 import { attributes } from '@/content/index.md';
 
@@ -14,15 +15,23 @@ interface Section {
   id?: string;
   type: string;
   video?: string;
+  subtitle?: string;
   title?: string;
+  image?: string;
   content?: string;
   ctaText?: string;
   ctaLink?: string;
   items?: Array<Item>;
+  stats?: Array<Stat>;
 }
 
 interface Item {
   title: string;
+  content: string;
+}
+
+interface Stat {
+  number: string;
   content: string;
 }
 
@@ -82,6 +91,25 @@ export default function Home() {
                 content={section.content || ""}
                 key={`${index}`}
                 items={section.items || []}
+              />
+            );
+          case 'map':
+            return (
+              <Map
+                title={section.title || "Delta Bridge Partners"}
+                subtitle={section.subtitle || ""}
+                image={section.image || ""}
+                key={`${index}`}
+                id={section.id || ""}
+              />
+            );
+          case 'stats':
+            return (
+              <Stats
+                title={section.title || "Delta Bridge Partners"}
+                stats={section.stats || []}
+                key={`${index}`}
+                id={section.id || ""}
               />
             );
           default:

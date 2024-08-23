@@ -21,4 +21,9 @@ sections:
         content: To be the preeminent capital solutions provider for opportunistic real estate investors, unlocking value through a combination of debt and equity financing strategies tailored to time-sensitive acquisitions and distressed asset scenarios.
       - title: Vission statement
         content: To become the industry leader in comprehensive real estate investment solutions, recognized for our unwavering commitment to speed, expertise, and client advocacy across the debt and equity spectrum.
+  - type: map
+    subtitle: Our offices
+    title: Operating worldwide from our US and Europe HQs.
+    image: /images/map.png
+    id: map
 ---
