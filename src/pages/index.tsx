@@ -8,6 +8,7 @@ import List from '@/components/List';
 import Map from '@/components/Map';
 import Stats from '@/components/Stats';
 import Services from '@/components/Services';
+import Quote from '@/components/Quote';
 
 import { attributes } from '@/content/index.md';
 
@@ -135,6 +136,16 @@ export default function Home() {
                 image={section.image || ""}
                 services={section.services || []}
                 key={`${index}`}
+              />
+            );
+          case 'quote':
+            return (
+              <Quote
+                key={`${index}`}
+                quote={section.content || ""}
+                bgColor={section.bgColor || "bg-stone-100"}
+                ctaText={section.ctaText || "Learn more"}
+                ctaLink={section.ctaLink || "#"}
               />
             );
           default:
