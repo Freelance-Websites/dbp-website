@@ -28,6 +28,7 @@ const Text = ({
       id={id}
       className={`px-4 lg:px-0 ${bgColor}`}
       ref={ref}
+      data-scroll-section
     >
       <ul
         className={`
@@ -37,19 +38,31 @@ const Text = ({
         `}
       >
         <li>
-          <h2 className={`font-serif ${fontColor} text-2xl md:text-4xl pb-0 md:pb-8 lg:pb-12`}>{title}</h2>
+          <h2
+            className={`font-serif ${fontColor} text-2xl md:text-4xl pb-0 md:pb-8 lg:pb-12`}
+            data-scroll
+            data-scroll-speed="0.5"
+          >
+            {title}
+          </h2>
           {ctaLink && ctaText &&
             <a
               href={isCtaUrl ? ctaLink : `#${ctaLink}`}
               className={`
                 font-serif ${fontColor} text-xl md:text-2xl underline decoration-indigo-400 underline-offset-8 hover:no-underline decoration-1 hidden md:block
               `}
+              data-scroll
+              data-scroll-speed="0.5"
             >
               {ctaText}
             </a>
           }
         </li>
-        <li className={`${fontColor} font-light text-lg md:text-2xl md:leading-relaxed grid gap-4 md:gap-6 relative md:top-1.5`}>
+        <li
+          className={`${fontColor} font-light text-lg md:text-2xl md:leading-relaxed grid gap-4 md:gap-6 relative md:top-1.5`}
+          data-scroll
+          data-scroll-speed="0.5"
+        >
           <ReactMarkdown>{content}</ReactMarkdown>
         </li>
         {/* Separate mobile CTA */}
@@ -58,6 +71,8 @@ const Text = ({
             <a
               href={isCtaUrl ? ctaLink : `#${ctaLink}`}
               className={`${fontColor} font-serif text-xl md:text-2xl underline decoration-indigo-400 underline-offset-8 hover:no-underline decoration-1`}
+              data-scroll
+              data-scroll-speed="0.5"
             >
               {ctaText}
             </a>

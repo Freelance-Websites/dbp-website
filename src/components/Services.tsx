@@ -20,6 +20,7 @@ const Services = ({
   return (
     <section
       id={id}
+      data-scroll-section
     >
         {services.length > 0 &&
           <ul className="grid grid-cols-1 lg:grid-cols-2">
@@ -28,8 +29,9 @@ const Services = ({
                 src={image}
                 alt="Services"
                 loading="lazy"
-                layout="fill"
-                objectFit="cover"
+                width={640}
+                height={480}
+                className="w-full h-full object-cover"
               />
             </li>
             {services.map((service, index) => {
@@ -44,7 +46,12 @@ const Services = ({
                   key={index}
                   className={`${service.bgColor} px-4 md:px-8 py-12 md:py-0 grid grid-cols-1 content-center md:aspect-[4/3]`}
                 >
-                  <div className="grid grid-cols-1 content-center gap-3 max-w-xl mx-auto" ref={ref}>
+                  <div
+                    className="grid grid-cols-1 content-center gap-3 max-w-xl mx-auto"
+                    ref={ref}
+                    data-scroll
+                    data-scroll-speed="0.5"
+                  >
                     <span
                       className={`
                         ${fontColor} text-sm uppercase tracking-widest font-medium

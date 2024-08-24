@@ -6,6 +6,7 @@ export default function Document() {
       <Head>
         {/* Meta tags */}
         <title>Delta Bridge Partners</title>
+        <meta name="description" content="A premier investment advisory firm specializing in real estate. We offer a comprehensive platform that caters to both sophisticated investors seeking exceptional returns and real estate developers requiring strategic capital." />
         {/* Favicons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

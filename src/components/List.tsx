@@ -28,6 +28,7 @@ const List = ({
     <section
       className={`${bgColor} px-4 lg:px-0`}
       id={id}
+      data-scroll-section
     >
       <div className="container mx-auto py-12 md:py-16 lg:py-24 xl:py-32 grid grid-cols-1 lg:grid-cols-2 gap-8">
         <ul>
@@ -38,6 +39,8 @@ const List = ({
                 ${inView ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-6'}
                 transform transition duration-1000 ease-in-out
               `}
+              data-scroll
+              data-scroll-speed="0.5"
             >
               {title}
             </h2>
@@ -47,6 +50,8 @@ const List = ({
                 ${inView ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-6'}
                 transform transition duration-1000 ease-in-out
               `}
+              data-scroll
+              data-scroll-speed="0.5"
             >
               {content}
             </p>
@@ -64,6 +69,8 @@ const List = ({
                 <li
                   key={index}
                   className="grid gap-4 md:gap-6 lg:gap-10"
+                  data-scroll
+                  data-scroll-speed="0.5"
                 >
                   <div className="flex items-center gap-3" ref={ref}>
                     <div

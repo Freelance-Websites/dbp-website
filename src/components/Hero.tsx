@@ -17,6 +17,7 @@ const Hero = ({
   return (
     <section
       id={id}
+      data-scroll-section
     >
       <div className="relative hero overflow-hidden">
         <div className="w-screen h-screen relative">
