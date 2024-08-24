@@ -9,6 +9,7 @@ import Map from '@/components/Map';
 import Stats from '@/components/Stats';
 import Services from '@/components/Services';
 import Quote from '@/components/Quote';
+import Contact from '@/components/Contact';
 
 import { attributes } from '@/content/index.md';
 
@@ -146,6 +147,16 @@ export default function Home() {
                 bgColor={section.bgColor || "bg-stone-100"}
                 ctaText={section.ctaText || "Learn more"}
                 ctaLink={section.ctaLink || "#"}
+              />
+            );
+          case 'contact':
+            return (
+              <Contact
+                key={`${index}`}
+                id={section.id || ""}
+                title={section.title || ""}
+                content={section.content || ""}
+                image={section.image || ""}
               />
             );
           default:

@@ -78,4 +78,10 @@ sections:
     bgColor: bg-stone-100
     ctaText: Contact us
     ctaLink: contact
+  - type: contact
+    title: Contact Us
+    image: /images/contact.jpg
+    id: contact
+    content: >-
+      Don’t hesitate to reach out to us for general inquiries at [contact@deltabridge.us](mailto:contact@deltabridge.us), or use the form below to get in touch with us.
 ---

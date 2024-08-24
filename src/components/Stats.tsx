@@ -24,9 +24,9 @@ const Stats = ({
 
   return (
     <section
-      className="px-4 lg:px-0 bg-cover bg-no-repeat relative"
+      className="px-4 lg:px-0 relative"
       style={{
-        background: `url(${image})`,
+        background: `url(${image}) no-repeat center center/cover`,
       }}
     >
       <div className="absolute w-full h-full bg-stone-800 opacity-20 left-0" />
