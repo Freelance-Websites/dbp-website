@@ -1,0 +1,114 @@
+backend:
+  name: git-gateway
+  branch: main
+editor:
+  preview: false
+media_folder: "public/images"
+public_folder: "/images"
+collections:
+  - name: "content"
+    label: "Contenido"
+    files:
+      - name: "landing"
+        label: "Landing page"
+        file: "content/index.md"
+        fields:
+          - label: "Secciones"
+            name: "sections"
+            widget: "list"
+            allow_add: true
+            types:
+              - label: "Imagen y texto a pantalla completa"
+                name: "hero"
+                fields:
+                  - {label: Video, name: video, widget: file, hint: Tamaño recomendado 2880x1800px o superior}
+                  - {label: Título, name: title, widget: string, hint: Título sobre el video}
+              - label: "Texto"
+                name: "text"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la sección}
+                  - {label: Contenido, name: content, widget: markdown}
+                  - {label: Texto del botón, required: false, name: ctaText, widget: string}
+                  - {label: Link del botón, required: false, name: ctaLink, widget: string}
+                  - label: "Color de fondo de la sección"
+                    name: "bgColor"
+                    widget: "select"
+                    required: false
+                    options:
+                      - { label: "Violeta", value: "bg-indigo-600" }
+                      - { label: "Blanco", value: "bg-stone-100" }
+                      - { label: "Negro", value: "bg-stone-800" }
+              - label: "Lista de elementos"
+                name: "list"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la sección}
+                  - {label: Contenido, name: content, widget: markdown}
+                  - {label: Texto del botón, required: false, name: ctaText, widget: string}
+                  - {label: Link del botón, required: false, name: ctaLink, widget: string}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    summary: '{{fields.title}}'
+                    fields:
+                      - {label: Título, name: title, widget: string}
+                      - {label: Contenido, name: content, widget: string}
+                  - label: "Color de fondo de la sección"
+                    name: "bgColor"
+                    widget: "select"
+                    required: false
+                    options:
+                      - { label: "Violeta", value: "bg-indigo-600" }
+                      - { label: "Blanco", value: "bg-stone-100" }
+                      - { label: "Negro", value: "bg-stone-800" }
+              - label: "Oficinas"
+                name: "map"
+                fields:
+                  - {label: Subtítulo, name: subtitle, widget: string, required: false, hint: Se muestra arriba del título}
+                  - {label: Título, name: title, widget: string}
+                  - {label: Mapa, name: image, widget: file, hint: Tamaño recomendado 2048x1920px o superior}
+              - label: "Estadísticas"
+                name: "stats"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la sección}
+                  - {label: Imagen de fondo, name: image, widget: file, hint: Tamaño recomendado 2048x1920px o superior}
+                  - label: "Estadísticas"
+                    name: "stats"
+                    widget: "list"
+                    summary: '{{fields.content}}'
+                    fields:
+                      - {label: Información pre-número, name: prepend, widget: string, hint: Se usa para mostrar un símbolo antes del número propiamente dicho, required: false}
+                      - {label: Número, name: number, widget: string, hint: El número que se anima al aparecer}
+                      - {label: Información post-número, name: append, widget: string, hint: Se usa para mostrar un símbolo después del número propiamente dicho, required: false}
+                      - {label: Descripción de la estadística, name: content, widget: string, hint: Se muestra debajo del número}
+              - label: "Servicios"
+                name: "services"
+                fields:
+                  - {label: Imagen, name: image, widget: file, hint: Tamaño recomendado 1920x1080px o superior}
+                  - label: "Servicios"
+                    name: "services"
+                    widget: "list"
+                    summary: '{{fields.title}}'
+                    fields:
+                      - {label: Subtítulo, name: subtitle, widget: string, required: false, hint: Se muestra arriba del título}
+                      - {label: Título, name: title, widget: string}
+                      - {label: Contenido, name: content, widget: string}
+              - label: "Frase"
+                name: "quote"
+                fields:
+                  - {label: Contenido, name: content, widget: string}
+                  - {label: Texto del botón, required: false, name: ctaText, widget: string}
+                  - {label: Link del botón, required: false, name: ctaLink, widget: string}
+                  - label: "Color de fondo de la sección"
+                    name: "bgColor"
+                    widget: "select"
+                    required: false
+                    options:
+                      - { label: "Violeta", value: "bg-indigo-600" }
+                      - { label: "Blanco", value: "bg-stone-100" }
+                      - { label: "Negro", value: "bg-stone-800" }
+              - label: "Contacto"
+                name: "contaact"
+                fields:
+                  - {label: Título, name: title, widget: string}
+                  - {label: Contenido, name: content, widget: markdown}
+                  - {label: Imagen de fondo, name: image, widget: file, hint: Tamaño recomendado 1920x1080px o superior}

@@ -48,15 +48,17 @@ const Services = ({
                     className="grid grid-cols-1 content-center gap-3 max-w-xl mx-auto"
                     ref={ref}
                   >
-                    <span
-                      className={`
-                        ${fontColor} text-sm uppercase tracking-widest font-medium
-                        ${inView ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-6'}
-                        transform transition delay-200 duration-1000 ease-in-out
-                      `}
-                    >
-                      {service.subtitle}
-                    </span>
+                    {service.subtitle &&
+                      <span
+                        className={`
+                          ${fontColor} text-sm uppercase tracking-widest font-medium
+                          ${inView ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-6'}
+                          transform transition delay-200 duration-1000 ease-in-out
+                        `}
+                      >
+                        {service.subtitle}
+                      </span>
+                    }
                     <h4
                       className={`
                         font-serif ${fontColor} text-2xl md:text-4xl
