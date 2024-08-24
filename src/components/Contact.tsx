@@ -1,4 +1,5 @@
 import ReactMarkdown from 'react-markdown';
+import { useInView } from "react-intersection-observer";
 
 import styles from './Contact.module.css';
 
@@ -13,6 +14,11 @@ const Contact = ({
   id: string;
   image: string;
 }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.25,
+  });
+
   return (
     <section
       className="px-4 lg:px-0 relative"
@@ -21,11 +27,27 @@ const Contact = ({
       }}
       id={id}
     >
-      <div className="container mx-auto py-12 md:py-16 lg:py-24 xl:py-32 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32">
+      <div className="container mx-auto py-12 md:py-16 lg:py-24 xl:py-32 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32" ref={ref}>
         <ul className="grid grid-cols-1 gap-6 md:gap-8 content-between">
           <li>
-            <h2 className="font-serif text-white text-2xl md:text-4xl pb-8 lg:pb-12">{title}</h2>
-            <ReactMarkdown className={`${styles.Paragraph} text-white font-light text-lg md:text-2xl md:leading-relaxed`}>{content}</ReactMarkdown>
+            <h2
+              className={`
+                font-serif text-white text-2xl md:text-4xl pb-8 lg:pb-12
+                ${inView ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-6'}
+                transform transition delay-200 duration-1000 ease-in-out
+              `}
+            >
+              {title}
+            </h2>
+            <ReactMarkdown
+              className={`
+                ${styles.Paragraph} text-white font-light text-lg md:text-2xl md:leading-relaxed
+                ${inView ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-6'}
+                transform transition delay-200 duration-1000 ease-in-out
+              `}
+            >
+              {content}
+            </ReactMarkdown>
           </li>
           {/* Desktop social networks & Copyright */}
           <li className="hidden md:block">
@@ -72,7 +94,13 @@ const Contact = ({
             </p>
           </li>
         </ul>
-        <form className="grid grid-cols-1 gap-6">
+        <form
+          className={`
+            grid grid-cols-1 gap-6
+            ${inView ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-6'}
+            transform transition delay-1000 duration-1000 ease-in-out
+          `}
+        >
           <div className="grid grid-cols-1 gap-3">
             <label
               htmlFor="name"
