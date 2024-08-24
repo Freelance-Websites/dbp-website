@@ -7,6 +7,7 @@ import Text from '@/components/Text';
 import List from '@/components/List';
 import Map from '@/components/Map';
 import Stats from '@/components/Stats';
+import Services from '@/components/Services';
 
 import { attributes } from '@/content/index.md';
 
@@ -25,6 +26,7 @@ interface Section {
   bgColor?: string;
   items?: Array<Item>;
   stats?: Array<Stat>;
+  services?: Array<Service>;
 }
 
 interface Item {
@@ -37,6 +39,13 @@ interface Stat {
   content: string;
   prepend?: string;
   append?: string;
+}
+
+interface Service {
+  title?: string;
+  subtitle?: string;
+  content?: string;
+  bgColor?: string;
 }
 
 export default function Home() {
@@ -116,6 +125,15 @@ export default function Home() {
                 title={section.title || "Delta Bridge Partners"}
                 image={section.image || ""}
                 stats={section.stats || []}
+                key={`${index}`}
+              />
+            );
+          case 'services':
+            return (
+              <Services
+                id={section.id || ""}
+                image={section.image || ""}
+                services={section.services || []}
                 key={`${index}`}
               />
             );

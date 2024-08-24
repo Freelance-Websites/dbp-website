@@ -57,4 +57,20 @@ sections:
       Delta Bridge Partners is a leading provider of real estate financing solutions. We offer a comprehensive suite of products designed to meet the needs of borrowers across the real estate spectrum.
     ctaText: Learn more
     ctaLink: service-list
+  - type: services
+    id: service-list
+    image: /images/services.jpg
+    services:
+      - title: Bridge Loans
+        subtitle: Our offerings
+        content: Access capital quickly for property acquisitions, renovations, or refinancing.
+        bgColor: bg-stone-100
+      - title: Construction Financing
+        subtitle: Our offerings
+        content: Secure the funds needed to build or develop your project.
+        bgColor: bg-stone-800
+      - title: Permanent Financing
+        subtitle: Our offerings
+        content: Obtain long-term debt solutions for stabilized properties.
+        bgColor: bg-indigo-600
 ---
