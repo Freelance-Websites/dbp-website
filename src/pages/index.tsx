@@ -54,74 +54,25 @@ export default function Home() {
   const { sections } = attributes;
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // const handleScroll = () => {
-  //   if (window.scrollY > 900) {
-  //   setIsScrolled(true);
-  //   } else {
-  //   setIsScrolled(false);
-  //   }
-  // };
+  const handleScroll = () => {
+    if (window.scrollY > 900) {
+    setIsScrolled(true);
+    } else {
+    setIsScrolled(false);
+    }
+  };
 
   useEffect(() => {
-    import("locomotive-scroll").then((locomotiveModule) => {
-      const scrollContainer = document.querySelector("[data-scroll-container]");
-      if (scrollContainer instanceof HTMLElement) {
-        let scroll = new locomotiveModule.default({
-            el: scrollContainer,
-            smooth: true,
-            resetNativeScroll: false,
-            getDirection: true,
-            reloadOnContextChange: true,
-            smartphone: {
-              smooth: false,
-            },
-            tablet: {
-              breakpoint: 1024,
-              smooth: false,
-            },
-         });
+    window.addEventListener('scroll', handleScroll);
 
-        // const anchorLinks = document.querySelectorAll('a[href^="#"]');
-        
-        // Add id to headings for anchor links
-        // anchorLinks.forEach((link) => {
-        //   const linkText = (link as HTMLAnchorElement).href.split('#')[1];
-        //   const headingElements = document.querySelectorAll(`h1, h2, h3, h4, h5, h6`);
-        //   headingElements.forEach((headingElement) => {
-        //     if (headingElement.getAttribute('data-title')?.includes(linkText)) {
-        //       const parentSection = headingElement.closest('section');
-        //       if (parentSection) {
-        //         parentSection.id = linkText;
-        //       }
-        //     }
-        //   });
-        // });
-
-        scroll.on('scroll', (instance) => {
-          if(instance.scroll.y > 900) {
-            setIsScrolled(true)
-          } else {
-            setIsScrolled(false);
-          }
-        });
-
-        return () => {
-          if (scroll) scroll.destroy();
-        }
-       }
-    });
-
-    // window.addEventListener('scroll', handleScroll);
-
-    // return () => {
-    // window.removeEventListener('scroll', handleScroll);
-    // };
+    return () => {
+    window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
     <main
       className={`${inter.className}`}
-      data-scroll-container
     >
       <Header
         isScrolled={isScrolled}

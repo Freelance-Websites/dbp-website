@@ -26,9 +26,11 @@ const Contact = ({
         background: `url(${image}) no-repeat center center/cover`,
       }}
       id={id}
-      data-scroll-section
     >
-      <div className="container mx-auto py-12 md:py-16 lg:py-24 xl:py-32 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32" ref={ref}>
+      <article
+        className="container mx-auto py-12 md:py-16 lg:py-24 xl:py-32 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32"
+        ref={ref}
+      >
         <ul className="grid grid-cols-1 gap-6 md:gap-8 content-between">
           <li>
             <h2
@@ -196,7 +198,7 @@ const Contact = ({
             Copyright &copy; {new Date().getFullYear()} Delta Bridge Partners.
           </p>
         </div>
-      </div>
+      </article>
     </section>
   );
 };

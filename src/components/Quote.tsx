@@ -20,17 +20,14 @@ const Quote = ({
   return (
     <section
       className={`${bgColor} px-4 md:px-8 lg:px-0`}
-      data-scroll-section
     >
-      <div className="container mx-auto py-12 md:py-16 lg:py-24 xl:py-32 grid grid-cols-1 gap-6 md:gap-8" ref={ref}>
+      <article className="container mx-auto py-12 md:py-16 lg:py-24 xl:py-32 grid grid-cols-1 gap-6 md:gap-8" ref={ref}>
         <blockquote
           className={`
             font-serif text-2xl md:text-4xl ${fontColor} text-center md:leading-normal mx-auto max-w-sm md:max-w-3xl
             ${inView ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-6'}
             transform transition delay-200 duration-1000 ease-in-out
           `}
-          data-scroll
-          data-scroll-speed="0.5"
         >
           {quote}
         </blockquote>
@@ -41,12 +38,10 @@ const Quote = ({
             ${inView ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-6'}
             transform transition delay-200 duration-1000 ease-in-out
           `}
-          data-scroll
-          data-scroll-speed="0.5"
         >
           {ctaText}
         </a>
-      </div>
+      </article>
     </section>
   );
 };

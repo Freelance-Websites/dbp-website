@@ -28,10 +28,9 @@ const Stats = ({
       style={{
         background: `url(${image}) no-repeat center center/cover`,
       }}
-      data-scroll-section
     >
       <div className="absolute w-full h-full bg-stone-800 opacity-20 left-0" />
-      <div className="container mx-auto py-12 md:py-16 lg:py-24 xl:py-32 relative">
+      <article className="container mx-auto py-12 md:py-16 lg:py-24 xl:py-32 relative">
         {title && (
           <p className="text-sm uppercase tracking-widest font-medium text-white mb-4">
             {title}
@@ -69,7 +68,7 @@ const Stats = ({
             ))}
           </ul>
         )}
-      </div>
+      </article>
     </section>
   );
 };

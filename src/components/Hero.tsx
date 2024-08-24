@@ -15,11 +15,8 @@ const Hero = ({
   });
 
   return (
-    <section
-      id={id}
-      data-scroll-section
-    >
-      <div className="relative hero overflow-hidden">
+    <section id={id}>
+      <article className="relative hero overflow-hidden">
         <div className="w-screen h-screen relative">
           <div className="absolute w-full h-full bg-stone-800 opacity-20" />
           <video
@@ -32,7 +29,7 @@ const Hero = ({
             <source src={video} />
           </video>
         </div>
-      </div>
+      </article>
       <div
         className="absolute flex items-center justify-center w-full h-full top-0 text-[7vw]"
         ref={ref}

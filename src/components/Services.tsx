@@ -18,10 +18,8 @@ const Services = ({
   services: Array<Service>;
 }) => {
   return (
-    <section
-      id={id}
-      data-scroll-section
-    >
+    <section id={id}>
+      <article>
         {services.length > 0 &&
           <ul className="grid grid-cols-1 lg:grid-cols-2">
             <li className="relative aspect-video md:aspect-[4/3]">
@@ -49,8 +47,6 @@ const Services = ({
                   <div
                     className="grid grid-cols-1 content-center gap-3 max-w-xl mx-auto"
                     ref={ref}
-                    data-scroll
-                    data-scroll-speed="0.5"
                   >
                     <span
                       className={`
@@ -86,6 +82,7 @@ const Services = ({
             )}
           </ul>
         }
+      </article>
     </section>
   );
 };

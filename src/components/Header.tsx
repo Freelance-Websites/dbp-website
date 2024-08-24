@@ -50,7 +50,7 @@ export default function Header({
             <li
               className={`uppercase md:text-xs tracking-widest font-medium ${isScrolled || isOpen ? 'text-stone-800' : 'text-white'} hover:opacity-70 transition duration-300 ease-in-out`}
             >
-              <a href="/contact">
+              <a href="#contact">
                 Contact
               </a>
             </li>

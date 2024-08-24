@@ -20,10 +20,13 @@ const Map = ({
   return (
     <section
       className="bg-stone-800 px-4 lg:px-0"
-      id={id}
       data-scroll-section
+      id={id}
     >
-      <div className="container mx-auto py-12 md:py-16 lg:py-24 xl:py-32 grid grid-cols-1 gap-3" ref={ref}>
+      <article
+        className="container mx-auto py-12 md:py-16 lg:py-24 xl:py-32 grid grid-cols-1 gap-3"
+        ref={ref}
+      >
         {subtitle && (
           <p
             className={`
@@ -31,8 +34,6 @@ const Map = ({
               ${inView ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-6'}
               transform transition delay-200 duration-1000 ease-in-out
             `}
-            data-scroll
-            data-scroll-speed="0.5"
           >
             {subtitle}
           </p>
@@ -44,8 +45,6 @@ const Map = ({
               ${inView ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-6'}
               transform transition delay-200 duration-1000 ease-in-out
             `}
-            data-scroll
-            data-scroll-speed="0.5"
           >
             {title}
           </h2>
@@ -64,7 +63,7 @@ const Map = ({
             loading="lazy"
           />
         )}
-      </div>
+      </article>
     </section>
   );
 };
