@@ -1,5 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import { useInView } from "react-intersection-observer";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import styles from './Contact.module.css';
 
@@ -18,6 +20,32 @@ const Contact = ({
     triggerOnce: true,
     threshold: 0.25,
   });
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const myForm = event.target as HTMLFormElement;
+    const formData = new FormData(myForm);
+    const formDataString = new URLSearchParams(formData as any).toString();
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: formDataString,
+    })
+      .then(() => toast("Mensaje enviado correctamente. Nos contactaremos a la brevedad.", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        type: "success",
+      
+      }))
+      .catch((error) => alert(error));
+  };
 
   return (
     <section
@@ -98,12 +126,21 @@ const Contact = ({
           </li>
         </ul>
         <form
+          data-netlify="true"
+          name="contact"
           className={`
             grid grid-cols-1 gap-6
             ${inView ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-6'}
             transform transition delay-1000 duration-1000 ease-in-out
           `}
+          method="POST"
+          netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
         >
+          {/* Honeypot */}
+          <input type="hidden" name="form-name" value="contact" />
+          <input name="bot-field" className="hidden" />
+          {/* Rest of the fiels */}
           <div className="grid grid-cols-1 gap-3">
             <label
               htmlFor="name"
@@ -199,6 +236,7 @@ const Contact = ({
           </p>
         </div>
       </article>
+      <ToastContainer autoClose={5000} />
     </section>
   );
 };
