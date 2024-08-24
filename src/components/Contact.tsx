@@ -21,14 +21,14 @@ const Contact = ({
     threshold: 0.25,
   });
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const myForm = event.target as HTMLFormElement;
     const formData = new FormData(myForm);
     const formDataString = new URLSearchParams(formData as any).toString();
 
-    fetch("/", {
+    await fetch("/__forms.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: formDataString,
@@ -150,6 +150,8 @@ const Contact = ({
             </label>
             <input
               type="text"
+              name="name"
+              id="name"
               required
               placeholder="Complete your name here"
               className="w-full p-4 bg-stone-800/80 backdrop-blur-sm text-white/90 rounded-lg border border-stone-700/60 font-light text-lg"
@@ -164,6 +166,8 @@ const Contact = ({
             </label>
             <input
               type="email"
+              name="email"
+              id="email"
               required
               placeholder="Complete your email here"
               className="w-full p-4 bg-stone-800/80 backdrop-blur-sm text-white/90 rounded-lg border border-stone-700/60 font-light text-lg"
@@ -178,6 +182,8 @@ const Contact = ({
             </label>
             <textarea
               required
+              name="message"
+              id="message"
               placeholder="Type your message here"
               className="w-full p-4 bg-stone-800/80 backdrop-blur-sm text-white/90 rounded-lg border border-stone-700/60 font-light text-lg resize-none h-32"
             />
