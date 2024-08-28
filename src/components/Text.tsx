@@ -36,7 +36,7 @@ const Text = ({
           transform transition delay-200 duration-1000 ease-in-out
         `}
       >
-        <li>
+        <div>
           <h2
             className={`font-serif ${fontColor} text-2xl md:text-4xl pb-0 md:pb-8 lg:pb-12`}
           >
@@ -52,14 +52,14 @@ const Text = ({
               {ctaText}
             </a>
           }
-        </li>
-        <li
+        </div>
+        <div
           className={`${fontColor} font-light text-lg md:text-2xl md:leading-relaxed grid gap-4 md:gap-6 relative md:top-1.5`}
         >
           <ReactMarkdown>{content}</ReactMarkdown>
-        </li>
+        </div>
         {/* Separate mobile CTA */}
-        <li className="block md:hidden">
+        <div className="block md:hidden">
           {ctaLink && ctaText &&
             <a
               href={isCtaUrl ? ctaLink : `#${ctaLink}`}
@@ -68,7 +68,7 @@ const Text = ({
               {ctaText}
             </a>
           }
-        </li>
+        </div>
       </article>
     </section>
   );
