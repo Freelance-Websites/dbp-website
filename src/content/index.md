@@ -36,16 +36,16 @@ sections:
     stats:
       - number: 150
         prepend: +
-        content: Loans funded
+        content: Deals Closed
       - number: 40
         prepend: +
-        content: Years combined experience
+        content: Years of combined experience
       - number: 350
         prepend: $
         append: M+
-        content: Total loan origination
+        content: in Funded Loans
       - number: 20
-        content: States served
+        content: US States Served
   - type: text
     title: Finance solutions
     id: services
