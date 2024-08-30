@@ -82,44 +82,15 @@ const Contact = ({
           </li>
           {/* Desktop social networks & Copyright */}
           <li className="hidden md:block">
-            <ol className="flex gap-2 mb-3">
-              <li>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-indigo-600 w-8 h-8 rounded-full flex items-center justify-center transition ease-in-out duration-300 hover:opacity-70"
-                >
-                  <svg fill="none" height="14" viewBox="0 0 8 14" width="8" xmlns="http://www.w3.org/2000/svg">
-                    <path d="m5.21166 7.90915h1.51515l.60606-2.42424h-2.12121v-1.21212c0-.62425 0-1.21212 1.21212-1.21212h.90909v-2.03637c-.19757-.026059-.94363-.084847-1.73151-.084847-1.64546 0-2.81394 1.004247-2.81394 2.848487v1.69697h-1.818182v2.42424h1.818182v5.15155h2.42424z" fill="#fff" />
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-indigo-600 w-8 h-8 rounded-full flex items-center justify-center transition ease-in-out duration-300 hover:opacity-70"
-                >
-                  <svg fill="none" height="12" viewBox="0 0 12 12" width="12" xmlns="http://www.w3.org/2000/svg">
-                    <path d="m6.90185 5.10903 4.23875-4.927271h-1.0048l-3.68062 4.278181-2.93939-4.278788h-3.390302l4.444242 6.470298-4.444242 5.16665h1.004242l3.88667-4.51816 3.10485 4.51816h3.39025l-4.61025-6.70907zm-1.37576 1.59939-.4509-.64424-3.58364-5.126058h1.54303l2.89212 4.136358.4503.64425 3.7594 5.37757h-1.54303z" fill="#fff"/>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-indigo-600 w-8 h-8 rounded-full flex items-center justify-center transition ease-in-out duration-300 hover:opacity-70"
-                >
-                  <svg fill="none" height="12" viewBox="0 0 12 12" width="12" xmlns="http://www.w3.org/2000/svg">
-                    <path d="m2.56975 1.75814c-.00016.32147-.12802.62972-.35545.85692s-.5358.35475-.85728.35459c-.32147-.00016-.629715-.12802-.856918-.35545-.227204-.22743-.354755-.5358-.354594-.85727.000161-.32148.12802-.62972.355451-.856926.22743-.227203.535801-.354754.857281-.354594.32147.000161.62971.12802.85692.355451.2272.227429.35475.535799.35459.857279zm.03636 2.10909h-2.424238v7.58787h2.424238zm3.83031 0h-2.41212v7.58787h2.38787v-3.98181c0-2.21818 2.89091-2.42424 2.89091 0v3.98181h2.39392v-4.80605c0-3.7394-4.27876-3.6-5.28483-1.76364z" fill="#fff"/>
-                  </svg>
-                </a>
-              </li>
-            </ol>
+            <svg fill="none" height="18" viewBox="0 0 80 18" width="80" xmlns="http://www.w3.org/2000/svg" className="fill-stone-400 mb-2">
+              <g>
+                <path clipRule="evenodd" d="m69.0479 0 10.354 17.9337-8.4823-.0133-6.0957-10.59869zm-5.2873 9.00002 5.154 8.92698-10.3023-.0033z" fillRule="evenodd" className="fill-stone-400" />
+                <path d="m44.5493 3.56808v-3.524684h15.1772v3.524684h-5.4448v14.43192h-4.2788v-14.43192z" />
+                <path d="m33.2739 18v-17.956604h4.3401v14.431904h7.4703v3.5247z" />
+                <path d="m18.0356 18v-17.956604h12.5206v3.524684h-8.1805v3.68251h7.5404v3.53341h-7.5404v3.6913h8.1805v3.5247z" />
+                <path d="m6.63728 18h-6.63728v-17.956604h6.62851c1.82956 0 3.40489.359483 4.72589 1.078444 1.3269.71312 2.3498 1.74189 3.0687 3.0863.719 1.33856 1.0785 2.94015 1.0785 4.80479 0 1.87047-.3595 3.47797-1.0785 4.82237-.7131 1.3444-1.7331 2.3761-3.0599 3.095-1.3269.7131-2.9022 1.0697-4.72592 1.0697zm-2.29718-3.7h2.13059c1.00538 0 1.85587-.1696 2.55145-.5086.70143-.3448 1.23046-.9031 1.58696-1.6746.3624-.7775.5436-1.8121.5436-3.10387 0-1.2918-.1812-2.32056-.5436-3.08629-.3624-.77157-.89722-1.32687-1.6045-1.6659-.70143-.34487-1.56652-.5173-2.59529-.5173h-2.06921z" />
+              </g>
+            </svg>
             <p className="text-sm uppercase tracking-widest font-medium text-stone-400">
               Copyright &copy; {new Date().getFullYear()} Delta Bridge Partners.
             </p>
@@ -199,44 +170,15 @@ const Contact = ({
         </form>
         {/* Mobile social networks & Copyright */}
         <div className="block md:hidden">
-          <ol className="flex gap-2 mb-3">
-            <li>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-indigo-600 w-8 h-8 rounded-full flex items-center justify-center transition ease-in-out duration-300 hover:opacity-70"
-              >
-                <svg fill="none" height="14" viewBox="0 0 8 14" width="8" xmlns="http://www.w3.org/2000/svg">
-                  <path d="m5.21166 7.90915h1.51515l.60606-2.42424h-2.12121v-1.21212c0-.62425 0-1.21212 1.21212-1.21212h.90909v-2.03637c-.19757-.026059-.94363-.084847-1.73151-.084847-1.64546 0-2.81394 1.004247-2.81394 2.848487v1.69697h-1.818182v2.42424h1.818182v5.15155h2.42424z" fill="#fff" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-indigo-600 w-8 h-8 rounded-full flex items-center justify-center transition ease-in-out duration-300 hover:opacity-70"
-              >
-                <svg fill="none" height="12" viewBox="0 0 12 12" width="12" xmlns="http://www.w3.org/2000/svg">
-                  <path d="m6.90185 5.10903 4.23875-4.927271h-1.0048l-3.68062 4.278181-2.93939-4.278788h-3.390302l4.444242 6.470298-4.444242 5.16665h1.004242l3.88667-4.51816 3.10485 4.51816h3.39025l-4.61025-6.70907zm-1.37576 1.59939-.4509-.64424-3.58364-5.126058h1.54303l2.89212 4.136358.4503.64425 3.7594 5.37757h-1.54303z" fill="#fff"/>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-indigo-600 w-8 h-8 rounded-full flex items-center justify-center transition ease-in-out duration-300 hover:opacity-70"
-              >
-                <svg fill="none" height="12" viewBox="0 0 12 12" width="12" xmlns="http://www.w3.org/2000/svg">
-                  <path d="m2.56975 1.75814c-.00016.32147-.12802.62972-.35545.85692s-.5358.35475-.85728.35459c-.32147-.00016-.629715-.12802-.856918-.35545-.227204-.22743-.354755-.5358-.354594-.85727.000161-.32148.12802-.62972.355451-.856926.22743-.227203.535801-.354754.857281-.354594.32147.000161.62971.12802.85692.355451.2272.227429.35475.535799.35459.857279zm.03636 2.10909h-2.424238v7.58787h2.424238zm3.83031 0h-2.41212v7.58787h2.38787v-3.98181c0-2.21818 2.89091-2.42424 2.89091 0v3.98181h2.39392v-4.80605c0-3.7394-4.27876-3.6-5.28483-1.76364z" fill="#fff"/>
-                </svg>
-              </a>
-            </li>
-          </ol>
+          <svg fill="none" height="18" viewBox="0 0 80 18" width="80" xmlns="http://www.w3.org/2000/svg" className="fill-stone-400 mb-2">
+            <g>
+              <path clipRule="evenodd" d="m69.0479 0 10.354 17.9337-8.4823-.0133-6.0957-10.59869zm-5.2873 9.00002 5.154 8.92698-10.3023-.0033z" fillRule="evenodd" className="fill-stone-400" />
+              <path d="m44.5493 3.56808v-3.524684h15.1772v3.524684h-5.4448v14.43192h-4.2788v-14.43192z" />
+              <path d="m33.2739 18v-17.956604h4.3401v14.431904h7.4703v3.5247z" />
+              <path d="m18.0356 18v-17.956604h12.5206v3.524684h-8.1805v3.68251h7.5404v3.53341h-7.5404v3.6913h8.1805v3.5247z" />
+              <path d="m6.63728 18h-6.63728v-17.956604h6.62851c1.82956 0 3.40489.359483 4.72589 1.078444 1.3269.71312 2.3498 1.74189 3.0687 3.0863.719 1.33856 1.0785 2.94015 1.0785 4.80479 0 1.87047-.3595 3.47797-1.0785 4.82237-.7131 1.3444-1.7331 2.3761-3.0599 3.095-1.3269.7131-2.9022 1.0697-4.72592 1.0697zm-2.29718-3.7h2.13059c1.00538 0 1.85587-.1696 2.55145-.5086.70143-.3448 1.23046-.9031 1.58696-1.6746.3624-.7775.5436-1.8121.5436-3.10387 0-1.2918-.1812-2.32056-.5436-3.08629-.3624-.77157-.89722-1.32687-1.6045-1.6659-.70143-.34487-1.56652-.5173-2.59529-.5173h-2.06921z" />
+            </g>
+          </svg>
           <p className="text-sm uppercase tracking-widest font-medium text-stone-400">
             Copyright &copy; {new Date().getFullYear()} Delta Bridge Partners.
           </p>
