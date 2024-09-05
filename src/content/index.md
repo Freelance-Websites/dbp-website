@@ -35,10 +35,10 @@ sections:
     image: /images/stats.jpg
     stats:
       - number: 150
-        prepend: +
+        append: +
         content: Deals Closed
       - number: 40
-        prepend: +
+        append: +
         content: Years of combined experience
       - number: 350
         prepend: $
