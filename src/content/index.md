@@ -90,7 +90,7 @@ sections:
     content: Our experienced team works closely with borrowers to understand their
       unique needs and provide tailored financing solutions. We pride ourselves
       on our ability to close transactions efficiently and deliver exceptional
-      customer service
+      customer service.
     bgColor: bg-stone-100
     ctaText: Contact us
     ctaLink: contact
