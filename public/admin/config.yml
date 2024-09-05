@@ -11,7 +11,7 @@ collections:
     files:
       - name: "landing"
         label: "Landing page"
-        file: "content/index.md"
+        file: "src/content/index.md"
         fields:
           - label: "Secciones"
             name: "sections"
