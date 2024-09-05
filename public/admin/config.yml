@@ -107,7 +107,7 @@ collections:
                       - { label: "Blanco", value: "bg-stone-100" }
                       - { label: "Negro", value: "bg-stone-800" }
               - label: "Contacto"
-                name: "contaact"
+                name: "contact"
                 fields:
                   - {label: Título, name: title, widget: string}
                   - {label: Contenido, name: content, widget: markdown}
