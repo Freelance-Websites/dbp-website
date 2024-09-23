@@ -52,9 +52,9 @@ sections:
       - number: 40
         append: +
         content: Years of combined experience
-      - number: 1 20
+      - number: "1"
         prepend: $
-        append: M
+        append: M+
         content: Loan Sizes
       - number: 20
         content: US States Served
