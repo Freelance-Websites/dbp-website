@@ -52,7 +52,7 @@ sections:
       - number: 40
         append: +
         content: Years of combined experience
-      - number: 1 20
+      - number: 1 to 20
         prepend: $
         append: M
         content: Loan Sizes
