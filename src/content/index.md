@@ -46,16 +46,16 @@ sections:
     title: By the numbers
     image: /images/stats.jpg
     stats:
-      - number: 150
+      - number: "100"
         append: +
         content: Deals Closed
       - number: 40
         append: +
         content: Years of combined experience
-      - number: 350
+      - number: 1-20
         prepend: $
-        append: M+
-        content: in Funded Loans
+        append: M
+        content: Loan Sizes
       - number: 20
         content: US States Served
   - type: text
